@@ -1,0 +1,18 @@
+# Create project root and virtual environment directory
+mkdir myapp && cd myapp
+python3 -m venv venv
+# Activate environment
+source venv/bin/activate
+pip install Flask Flask-SQLAlchemy Flask-Migrate python-dotenv
+
+# Create application directories
+mkdir -p app/templates app/static
+
+# Create Python package files
+touch app/__init__.py app/routes.py app/models.py app/forms.py
+# Create templates and static files
+touch app/templates/base.html app/templates/index.html app/templates/user_form.html
+touch app/static/style.css
+
+# Create top-level files
+touch config.py run.py .env
